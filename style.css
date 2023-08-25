@@ -1,0 +1,11 @@
+.fa-solid {
+    transition: 0.3s;
+}
+
+.fa-trash:hover {
+    color: red;
+}
+
+.fa-pen-to-square:hover {
+    color: aqua;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/fontawesome.js"></script>
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-success p-5 d-flex flex-column justify-content-around align-items-center">
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">edit book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="py-2 px-3" action="">
+                        <div class="form-group">
+                            <label class="form-lable" for="edit-id">id</label><input class="form-control" id="edit-id"
+                                type="text" disabled>
+                            <label class="form-lable" for="edit-created-at">created_at</label><input class="form-control" id="edit-created-at" type="text" disabled>
+                            <label class="form-lable" for="edit-name">book name</label><input class="form-control"
+                                id="edit-name" type="text">
+                            <label class="form-lable" for="edit-price">price</label><input class="form-control"
+                                id="edit-price" type="text">
+                            <label class="form-lable" for="edit-author">author</label><input class="form-control"
+                                id="edit-author" type="text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="submitEditBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form class="bg-light p-5 rounded-3 shadow mb-5" action="">
+        <div class="form-group">
+            <label class="form-lable fs-5" for="name">book name</label><input class="form-control form-control-lg"
+                id="name" type="text">
+            <label class="form-lable fs-5" for="price">price</label><input class="form-control form-control-lg"
+                id="price" type="text">
+            <label class="form-lable fs-5" for="author">author</label><input class="form-control form-control-lg"
+                id="author" type="text">
+
+            <button id="addBookBtn" class="form-control btn btn-primary mt-3">add Book</button>
+            <button id="clearBtn" class="form-control btn btn-outline-danger mt-3">clear library</button>
+        </div>
+    </form>
+
+    <table class="table table-dark table-striped table-bordered text-center w-75">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>created at</th>
+                <th>name</th>
+                <th>price</th>
+                <th>author</th>
+                <th>remove</th>
+                <th>edit</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
